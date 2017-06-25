@@ -5,29 +5,10 @@ $(document).ready(function(){
 function startScreen(){ //Main menu called on first page load
 	$(".output").html("");
 	trafficCodes();
-	//$(".output").append('<div class="box codeSectionsButton">Code Sections</div>'); 
-	// $(".output").append('<div class="box courtInfoButton">Court Info</div>'); not impliemented yet
-	// $(".output").append('<div class="box duiInfoButton">DUI Info</div>');  not implemented yet
 	
-
 	$(".backButton").click(trafficCodes);
-	$(".codeSectionsButton").click(codeSections);
-	$(".trafficButton").click(trafficCodes);
-	$(".criminalButton").click(criminalCodes);
-	$(".cmvButton").click(cmvCodes);
-	$(".startScreenButton").click(startScreen);
-
-	// $(".courtInfoButton").click(courtInfo);
-	// $(".duiInfoButton").click(duiInfo);
-
 };
 
-function codeSections(){
-	$(".output").html('<div class="box trafficButton">Traffic Codes</div>');
-	$(".output").append('<div class="box criminalButton">Criminal Codes</div>');
-	$(".output").append('<div class="box cmvButton">CMV Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
-};
 
 /**********************
 Begin Codes Subsections
@@ -53,7 +34,6 @@ function trafficCodes(){
 	$(".output").append('<div class="box speedingButton">Speeding</div>');
 	$(".output").append('<div class="box truckButton">Trucks, Towing, Hauling</div>');
 	$(".output").append('<div class="box farmButton">Farm Use</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".alcoholButton").click(alcohol)
 	$(".dliButton").click(dli)
@@ -75,7 +55,6 @@ function trafficCodes(){
 	$(".speedingButton").click(speeding)
 	$(".truckButton").click(truck)
 	$(".farmButton").click(farm)
-	$(".startScreenButton").click(startScreen);		
 };
 
 /**********************
@@ -95,14 +74,13 @@ function alcohol(){
 	$(".output").append('<div class="box codeButton closedBox">Tamper / allow operate w/o interlock [18.2-270.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Transporation of Alcohol [4.1-310]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function dli(){
 	$(".output").html('<div class="box codeButton closedBox">Allow Drug/Alcohol suspended driver to operate vehicle [46.2-301.1](E)</div>');
@@ -126,14 +104,13 @@ function dli(){
 	$(".output").append('<div class="box codeButton closedBox">No Liability Insurance [46.2-707]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Crashes: Proof of Insurance [46.2-902.1]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function equipment(){
 	$(".output").html('<div class="box codeButton closedBox">Defective / Unsafe Equipemnt [46.2-1003]</div>');
@@ -159,14 +136,13 @@ function equipment(){
 	$(".output").append('<div class="box codeButton closedBox">Windshield equired after 07/01/1970 [46.2-1057]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Windshield wiperes required / defective [46.2-1055]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function inspection(){
 	$(".output").html('<div class="box codeButton closedBox">Altered / Counterfeit Sticker [46.2-1173]</div>');
@@ -174,14 +150,13 @@ function inspection(){
 	$(".output").append('<div class="box codeButton closedBox">Expired / No State Inspection/ Expired Rejection [46.2-1158]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Unauthorized Use of Inspection Sticker [46.2-1172]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function lights(){
 	$(".output").html('<div class="box codeButton closedBox">Defective Brake Light [46.2-707]</div>');
@@ -201,14 +176,13 @@ function lights(){
 	$(".output").append('<div class="box codeButton closedBox">Turn Signals, Inadequate [46.2-1039]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Turn Signals, Required [46.2-1038]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function miscTraffic(){
 	$(".output").html('<div class="box codeButton closedBox">Cutting/Injuring Trees, Bridge, Highway, Sign, etc [33.1-345]</div>');
@@ -239,14 +213,13 @@ function miscTraffic(){
 	$(".output").append('<div class="box codeButton closedBox">Unsafe Lane Change [46.2-804]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Use of Phone by Provisional Licensed Drivers [46.2-334.01]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function motorcycle(){
 	$(".output").html('<div class="box codeButton closedBox">ATV on roadway, ATV w/o Helmet, Age rest. [46.2-915.1]</div>');
@@ -269,14 +242,13 @@ function motorcycle(){
 	$(".output").append('<div class="box codeButton closedBox">Low-speed Vehicles; Required Equipment [46.2-908.2]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Low-speed Vehicles; Operation; License/Reg Required [46.2-908.3]</div>');  	
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function parking(){
 	$(".output").html('<div class="box codeButton closedBox">Abandoned / Unattended Vehicle (General) [46.2-1209]</div>');
@@ -291,14 +263,13 @@ function parking(){
 	$(".output").append('<div class="box codeButton closedBox">Improper Stopping Vehicles of Another [46.2-818]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Parking Too Close to Fire Apparatus (w/i 500\') [46.2-921]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function passing(){
 	$(".output").html('<div class="box codeButton closedBox">Fail to Give Way to Passing Vehicle [46.2-842]</div>');
@@ -309,14 +280,13 @@ function passing(){
 	$(".output").append('<div class="box codeButton closedBox">Improper Passing on Right (Shoulder Running) [46.2-841]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Passing Stopped School Bus [46.2-844]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function pedestrian(){
 	$(".output").html('<div class="box codeButton closedBox">Fail to walk on Left Side of Roadway [46.2-928]</div>');
@@ -327,14 +297,13 @@ function pedestrian(){
 	$(".output").append('<div class="box codeButton closedBox">Pedestrian Soliciting Rides [46.2-929]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Unlawful Playing on Streets/Highway [46.2-932]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function reckless(){
 	$(".output").html('<div class="box codeButton closedBox">Agressive Driving [46.2-868.1]</div>');
@@ -354,14 +323,13 @@ function reckless(){
 	$(".output").append('<div class="box codeButton closedBox">Speeding (20mph over, or 81mph and up) [46.2-862]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Too many in Front Seat / Obstructed View [46.2-855]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function registration(){
 	$(".output").html('<div class="box codeButton closedBox">Antique Plates; Violation of and Restrictions [46.2-730]</div>');
@@ -385,14 +353,13 @@ function registration(){
 	$(".output").append('<div class="box codeButton closedBox">Operate For Hire Vehicle w/o For Hire Tags [46.2-724]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Suspension for defective/inadequate equipment [46.2-1000]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function rightOfWay(){
 	$(".output").html('<div class="box codeButton closedBox">Fail to Stop Before Entering Public Highway [46.2-826]</div>');
@@ -408,28 +375,26 @@ function rightOfWay(){
 	$(".output").append('<div class="box codeButton closedBox">Improper Turn/ U-Turn on Curve or Crest of Grade [46.2-845]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Improper Turning at Intersections [46.2-846]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function bus(){
 	$(".output").html('<div class="box codeButton closedBox">Driver to Wear Seatbelt [46.2-1091]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Lettering Required [46.2-1089]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Warning Device Required [46.2-1090]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function seatbelt(){
 	$(".output").html('<div class="box codeButton closedBox">Driver\'s Seat Required [46.2-1084]</div>');
@@ -437,14 +402,13 @@ function seatbelt(){
 	$(".output").append('<div class="box codeButton closedBox">Fail to secure child under 17 (under 8 requires child seat) [46.2-1095]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Seat Belts Required [46.2-1092]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function signal(){
 	$(".output").html('<div class="box codeButton closedBox">CMV in Left Lane [46.2-803.1]</div>');
@@ -466,14 +430,13 @@ function signal(){
 	$(".output").append('<div class="box codeButton closedBox">Unauthorized Use of Crossover [46.2-808.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Unofficial Signs Prohibited [46.2-831]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function size(){
 	$(".output").html('<div class="box codeButton closedBox">Fail to Display Flat/Light at End of Load Extending > 4\' [46.2-1121]</div>');
@@ -482,14 +445,13 @@ function size(){
 	$(".output").append('<div class="box codeButton closedBox">Over Gross Weight (Non-Interstate) [46.2-1126]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Over Height (13\' 6\") [46.2-1110]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function speeding(){
 	$(".output").html('<div class="box codeButton closedBox">Speeding (25mph School Zone) [46.2-873]</div>');
@@ -502,14 +464,13 @@ function speeding(){
 	$(".output").append('<div class="box codeButton closedBox">Speeding (Bridges) [46.2-881]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Speeding CMV (Violation of Permit/Oversized Loads) [46.2-872]</div>');	
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function truck(){
 	$(".output").html('<div class="box codeButton closedBox">Brake Lights not visible 500\' to rear (on towed vehicle) [46.2-1014]</div>');
@@ -533,14 +494,13 @@ function truck(){
 	$(".output").append('<div class="box codeButton closedBox">Unlawfully Occupying a Trailer (RV or Any) While Towed [46.2-813]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Vehicles Having More Than 1 Trailer, etc, Attached Thereto [46.2-1116]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
+	
 };
 function farm(){
 	$(".output").html('<div class="box codeButton closedBox">Certain veh\'s transp. fertilizer/cotton/peanuts, reg exempt [46.2-672]</div>');
@@ -561,56 +521,15 @@ function farm(){
 	$(".output").append('<div class="box codeButton closedBox">Violation of \"Farm Use\" tags [46.2-665]</div>');
 	$(".output").append('<div class="box codeButton closedBox">When CDL required to operate registered Fram Vehicle [46.2-341.4]</div>');
 	$(".output").append('<div class="box trafficButton">Return to Traffic Codes</div>');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 
 	$(".codeButton").click(function() {
 		var divTarget = $(this);
 		codeClicked(divTarget);
 	});
 	$(".trafficButton").click(trafficCodes);
-	$(".startScreenButton").click(startScreen);
-};
-
-
-/**********************
-End Traffic Subsections
-***********************/
-
-function criminalCodes(){
-	$(".output").html('Criminal Codes Go Here');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
-	$(".startScreenButton").click(startScreen);
-};
-
-function cmvCodes(){
-	$(".output").html('CMV Codes Go Here');
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
-
-	$(".startScreenButton").click(startScreen);
-}
-
-/**********************
-End Codes Subsections
-***********************/
-
-
-function courtInfo(){
-	$(".output").html("COURT SECTION FUNCTION");
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
 	
-	$(".startScreenButton").click(startScreen);
 };
 
-function duiInfo(){
-	$(".output").html("DUI INFO FUNCTION");
-	// $(".output").append('<div class="box startScreenButton">Return to Main Page</div>');
-	
-	$(".startScreenButton").click(startScreen);
-};
-
-/**********************
-End Info Subsections
-***********************/
 
 /**********************
 Helper Functions
