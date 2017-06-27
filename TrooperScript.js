@@ -2,11 +2,21 @@ $(document).ready(function(){
 	startScreen();
 });
 
-function startScreen(){ //Main menu called on first page load
-	$(".output").html("");
+function startScreen(){
+	/*
+	Initial function.  Builds initial url fragment (#main), and sets event listener
+	before launching initial view with trafficCodes().  Any navigation from 
+	trafficCodes() changes the fragment to #trafficSubSection, allowing intuitive
+	browser back-button use for
+	 */
+	window.location ='#main'
+	window.onhashchange = () => {
+		if (window.location.hash == '#main' ) {
+			trafficCodes();
+		}
+	};
+
 	trafficCodes();
-	
-	$(".backButton").click(trafficCodes);
 };
 
 
@@ -61,6 +71,7 @@ function trafficCodes(){
 Begin Traffic Subsections
 ***********************/
 function alcohol(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Drinking in Public [4.1-308]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Drinking while Driving / Open Container [18.2-323.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">DUI Under 21 years old, 0.2-0.7 BAC [18.2-266.1]</div>');
@@ -83,6 +94,7 @@ function alcohol(){
 	
 };
 function dli(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Allow Drug/Alcohol suspended driver to operate vehicle [46.2-301.1](E)</div>');
 	$(".output").append('<div class="box codeButton closedBox">Allowing Unlicensed perosn to drive [46.2-349]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Display Revoked/Suspended/Altered OL [46.2-346]</div>');
@@ -113,6 +125,7 @@ function dli(){
 	
 };
 function equipment(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Defective / Unsafe Equipemnt [46.2-1003]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Horn: Defective / inadequate / none [46.2-1059]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Horn: Illegal (Whistle/Siren)</div>');
@@ -145,6 +158,7 @@ function equipment(){
 	
 };
 function inspection(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Altered / Counterfeit Sticker [46.2-1173]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Exceptions to Inspection Requirement [46.2-1158.01]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Expired / No State Inspection/ Expired Rejection [46.2-1158]</div>');
@@ -159,6 +173,7 @@ function inspection(){
 	
 };
 function lights(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Defective Brake Light [46.2-707]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Drive w/o Headlights, Amber Lights Required on Tow Trucks [46.2-1030]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Dim Headlights - Moving [46.2-1034]</div>');
@@ -185,6 +200,7 @@ function lights(){
 	
 };
 function miscTraffic(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Cutting/Injuring Trees, Bridge, Highway, Sign, etc [33.1-345]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Depositing or Throwing Glass, Mud, Etc on Hwy [18.2-324]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Driving on Sidewalk [46.2-903]</div>');
@@ -222,6 +238,7 @@ function miscTraffic(){
 	
 };
 function motorcycle(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">ATV on roadway, ATV w/o Helmet, Age rest. [46.2-915.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Enforcement Regulations [46.2-800]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Wear Approved Helmet (Motorcycle) [46.2-910]</div>');
@@ -251,6 +268,7 @@ function motorcycle(){
 	
 };
 function parking(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Abandoned / Unattended Vehicle (General) [46.2-1209]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to set Parking Brake [46.2-1071]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Stop at Railroad Crossing [46.2-885]</div>');
@@ -272,6 +290,7 @@ function parking(){
 	
 };
 function passing(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Give Way to Passing Vehicle [46.2-842]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Give Way to Passing Veh on Divided Hwy [46.2-842.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Improper or Unsafe Passing [46.2-838]</div>');
@@ -289,6 +308,7 @@ function passing(){
 	
 };
 function pedestrian(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to walk on Left Side of Roadway [46.2-928]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Yield the ROW to a Pedestrian [46.2-924]</div>');
 	$(".output").append('<div class="box codeButton closedBox">How/Where Pedestrians to Cross/Not Interfere w/ Traffic [46.2-923]</div>');
@@ -306,6 +326,7 @@ function pedestrian(){
 	
 };
 function reckless(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Agressive Driving [46.2-868.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Aiding/Abetting in a Raise (Class 1 Misd) [46.2-866]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Reckless Driving at Church/School/Private Property [46.2-864]</div>');
@@ -332,6 +353,7 @@ function reckless(){
 	
 };
 function registration(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Antique Plates; Violation of and Restrictions [46.2-730]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Altered or Ficticious Registration [46.2-613]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Altered or Forged License Plates [46.2-722]</div>');
@@ -362,6 +384,7 @@ function registration(){
 	
 };
 function rightOfWay(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Stop Before Entering Public Highway [46.2-826]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Yield ROW (\'T\' Intersection) [46.2-824]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Yield ROW (General)[46.2-820]</div>');
@@ -384,6 +407,7 @@ function rightOfWay(){
 	
 };
 function bus(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Driver to Wear Seatbelt [46.2-1091]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Lettering Required [46.2-1089]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Warning Device Required [46.2-1090]</div>');
@@ -397,6 +421,7 @@ function bus(){
 	
 };
 function seatbelt(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Driver\'s Seat Required [46.2-1084]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to Wear Seatbelt [46.2-1094]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fail to secure child under 17 (under 8 requires child seat) [46.2-1095]</div>');
@@ -411,6 +436,7 @@ function seatbelt(){
 	
 };
 function signal(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">CMV in Left Lane [46.2-803.1]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Disobey Railroad Crossing Gate [46.2-885]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Evasion of Traffic Control Device [46.2-833.1]</div>');
@@ -439,6 +465,7 @@ function signal(){
 	
 };
 function size(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Display Flat/Light at End of Load Extending > 4\' [46.2-1121]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Liquidating Damages - Weight Limits [46.2-1135]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Load Extending More Than 3\' From Front [46.2-1120]</div>');
@@ -454,6 +481,7 @@ function size(){
 	
 };
 function speeding(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Speeding (25mph School Zone) [46.2-873]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Speeding (25mph Business & Residential) [46.2-874]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Speeding (35mph Non Surface Treated Hwy) [46.2-873.1]</div>');
@@ -473,6 +501,7 @@ function speeding(){
 	
 };
 function truck(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Brake Lights not visible 500\' to rear (on towed vehicle) [46.2-1014]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Brakes on Trailers, GW >3000lbs, Breakaway Cables required [46.2-1070]</div>');
 	$(".output").append('<div class="box codeButton closedBox">CMV Prohibited in Left Lane [46.2-803.1]</div>');
@@ -503,6 +532,7 @@ function truck(){
 	
 };
 function farm(){
+	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Certain veh\'s transp. fertilizer/cotton/peanuts, reg exempt [46.2-672]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Fuel Tax Laws - Willful commission of prohib. acts [58.1-2273]</div>');
 	$(".output").append('<div class="box codeButton closedBox">Improper sale/use of untaxed fuel; civil penalty [58.1-2265]</div>');
