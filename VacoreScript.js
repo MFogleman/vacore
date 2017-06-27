@@ -9,7 +9,7 @@ function startScreen(){
 	trafficCodes() changes the fragment to #trafficSubSection, allowing intuitive
 	browser back-button use for
 	 */
-	window.location ='#main'
+	window.location ='#main';
 	window.onhashchange = () => {
 		if (window.location.hash == '#main' ) {
 			trafficCodes();
@@ -17,7 +17,7 @@ function startScreen(){
 	};
 
 	trafficCodes();
-};
+}
 
 
 /**********************
@@ -45,27 +45,27 @@ function trafficCodes(){
 	$(".output").append('<div class="box truckButton">Trucks, Towing, Hauling</div>');
 	$(".output").append('<div class="box farmButton">Farm Use</div>');
 
-	$(".alcoholButton").click(alcohol)
-	$(".dliButton").click(dli)
-	$(".equipmentButton").click(equipment)
-	$(".inspectionButton").click(inspection)
-	$(".lightsButton").click(lights)
-	$(".miscTrafficButton").click(miscTraffic)
-	$(".motorcycleButton").click(motorcycle)
-	$(".parkingButton").click(parking)
-	$(".passingButton").click(passing)
-	$(".pedestrianButton").click(pedestrian)
-	$(".recklessButton").click(reckless)
-	$(".registrationButton").click(registration)
-	$(".rightOfWayButton").click(rightOfWay)
-	$(".busButton").click(bus)
-	$(".seatbeltButton").click(seatbelt)
-	$(".signalButton").click(signal)
-	$(".sizeButton").click(size)
-	$(".speedingButton").click(speeding)
-	$(".truckButton").click(truck)
-	$(".farmButton").click(farm)
-};
+	$(".alcoholButton").click(alcohol);
+	$(".dliButton").click(dli);
+	$(".equipmentButton").click(equipment);
+	$(".inspectionButton").click(inspection);
+	$(".lightsButton").click(lights);
+	$(".miscTrafficButton").click(miscTraffic);
+	$(".motorcycleButton").click(motorcycle);
+	$(".parkingButton").click(parking);
+	$(".passingButton").click(passing);
+	$(".pedestrianButton").click(pedestrian);
+	$(".recklessButton").click(reckless);
+	$(".registrationButton").click(registration);
+	$(".rightOfWayButton").click(rightOfWay);
+	$(".busButton").click(bus);
+	$(".seatbeltButton").click(seatbelt);
+	$(".signalButton").click(signal);
+	$(".sizeButton").click(size);
+	$(".speedingButton").click(speeding);
+	$(".truckButton").click(truck);
+	$(".farmButton").click(farm);
+}
 
 /**********************
 Begin Traffic Subsections
@@ -92,7 +92,7 @@ function alcohol(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function dli(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Allow Drug/Alcohol suspended driver to operate vehicle [46.2-301.1](E)</div>');
@@ -123,7 +123,7 @@ function dli(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function equipment(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Defective / Unsafe Equipemnt [46.2-1003]</div>');
@@ -156,7 +156,7 @@ function equipment(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function inspection(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Altered / Counterfeit Sticker [46.2-1173]</div>');
@@ -171,7 +171,7 @@ function inspection(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function lights(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Defective Brake Light [46.2-707]</div>');
@@ -198,7 +198,7 @@ function lights(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function miscTraffic(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Cutting/Injuring Trees, Bridge, Highway, Sign, etc [33.1-345]</div>');
@@ -236,7 +236,7 @@ function miscTraffic(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function motorcycle(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">ATV on roadway, ATV w/o Helmet, Age rest. [46.2-915.1]</div>');
@@ -266,7 +266,7 @@ function motorcycle(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function parking(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Abandoned / Unattended Vehicle (General) [46.2-1209]</div>');
@@ -288,7 +288,7 @@ function parking(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function passing(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Give Way to Passing Vehicle [46.2-842]</div>');
@@ -306,7 +306,7 @@ function passing(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function pedestrian(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to walk on Left Side of Roadway [46.2-928]</div>');
@@ -324,7 +324,7 @@ function pedestrian(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function reckless(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Agressive Driving [46.2-868.1]</div>');
@@ -351,7 +351,7 @@ function reckless(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function registration(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Antique Plates; Violation of and Restrictions [46.2-730]</div>');
@@ -382,7 +382,7 @@ function registration(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function rightOfWay(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Stop Before Entering Public Highway [46.2-826]</div>');
@@ -405,7 +405,7 @@ function rightOfWay(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function bus(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Driver to Wear Seatbelt [46.2-1091]</div>');
@@ -419,7 +419,7 @@ function bus(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function seatbelt(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Driver\'s Seat Required [46.2-1084]</div>');
@@ -434,7 +434,7 @@ function seatbelt(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function signal(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">CMV in Left Lane [46.2-803.1]</div>');
@@ -463,7 +463,7 @@ function signal(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function size(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Fail to Display Flat/Light at End of Load Extending > 4\' [46.2-1121]</div>');
@@ -479,7 +479,7 @@ function size(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function speeding(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Speeding (25mph School Zone) [46.2-873]</div>');
@@ -499,7 +499,7 @@ function speeding(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function truck(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Brake Lights not visible 500\' to rear (on towed vehicle) [46.2-1014]</div>');
@@ -530,7 +530,7 @@ function truck(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 function farm(){
 	window.location = '#trafficSubsection';
 	$(".output").html('<div class="box codeButton closedBox">Certain veh\'s transp. fertilizer/cotton/peanuts, reg exempt [46.2-672]</div>');
@@ -558,7 +558,7 @@ function farm(){
 	});
 	$(".trafficButton").click(trafficCodes);
 	
-};
+}
 
 
 /**********************
@@ -587,12 +587,12 @@ function codeClicked(divTarget){
 		});
 
 	}else if (!divTarget.hasClass("closedBox") && divTarget.hasClass("openBox")){  //if box is already expanded
-		divTarget.addClass("closedBox")
+		divTarget.addClass("closedBox");
 		var cleanText = divTarget.html().replace(/\<br\>.*\n\<p\>\<\/p\>/, ''); 
 		divTarget.html(cleanText);
 		divTarget.removeClass("openBox");
-	};
-};
+	}
+}
 
 function getText(lawObj){
 	var lawNumber = lawObj.match(/\[.*?\]/)[0].replace(/\[|\]/g, ''); //pulls Code Section Number from brackets in description
@@ -600,11 +600,11 @@ function getText(lawObj){
 	
 	return $.ajax({
 		type: "POST",
-		url: "TrooperCall.py",
+		url: "VacoreCall.py",
 		data: {"targetUrl": lawUrl},
 		dataType: "text"
 	});
-};
+}
 
 
 

@@ -4,7 +4,6 @@ body{
 	color:hsl(0, 0%, 95%);
 }
 
-
 .banner{
 	display:block;
 	font-size:40px;
@@ -12,20 +11,23 @@ body{
 	width:100%;
 	text-align:center;
 }
+
 .output{
 	width: 100%;
 	text-align:center;
 	margin: 0 auto;
 	height: 100%;
-	padding: 16px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
+
 .box{
 	margin: 0 auto;
 	width:90%;
 	text-align:left;
 	background-color:#13274B;
 	font-size: 4em;
-	padding:16px;
+	padding:.25em;
 	margin-top:1%;
 	border-radius:20px;
 	cursor:pointer;
