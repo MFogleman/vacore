@@ -1,4 +1,5 @@
 {
+	"devel": true,
 	"undef": true,
 	"unused": true,
 	"jquery": true,

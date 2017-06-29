@@ -4,17 +4,20 @@ $(document).ready(function(){
 
 function startScreen(){
 	/*
-	Initial function.  Builds initial url fragment (#main), and sets event listener
+	Initial function.  Builds initial url fragment (#main), and sets event listeners
 	before launching initial view with trafficCodes().  Any navigation from 
 	trafficCodes() changes the fragment to #trafficSubSection, allowing intuitive
 	browser back-button use for
 	 */
+	
 	window.location ='#main';
 	window.onhashchange = () => {
 		if (window.location.hash == '#main' ) {
 			trafficCodes();
 		}
 	};
+	var helpButton = document.getElementById('help');
+	helpButton.addEventListener('click', showHelp, false);
 
 	trafficCodes();
 }
@@ -604,6 +607,13 @@ function getText(lawObj){
 		data: {"targetUrl": lawUrl},
 		dataType: "text"
 	});
+}
+
+function showHelp(){
+	/*
+	Launches modal with supprt information
+	 */
+	console.log('help was clicked');
 }
 
 
