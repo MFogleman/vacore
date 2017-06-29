@@ -16,9 +16,10 @@ function startScreen(){
 			trafficCodes();
 		}
 	};
-	var helpButton = document.getElementById('help');
+	var helpButton = document.getElementsByClassName('help')[0];
 	helpButton.addEventListener('click', showHelp, false);
-
+	var closeButton = document.getElementById('close');
+	closeButton.addEventListener('click', closeHelp, false);
 	trafficCodes();
 }
 
@@ -610,10 +611,11 @@ function getText(lawObj){
 }
 
 function showHelp(){
-	/*
-	Launches modal with supprt information
-	 */
-	console.log('help was clicked');
+	document.getElementById('expanded').style.display ='block';
+}
+
+function closeHelp(){
+	document.getElementById('expanded').style.display='none';
 }
 
 

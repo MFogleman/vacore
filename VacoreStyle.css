@@ -37,9 +37,9 @@ body{
 	cursor:pointer;
 }
 
-#help{
+.help{
 	position:absolute;
-	right:4%;
+	margin-left:1em;
 	font-weight:bold;
 	background-color: #13274B;
 	padding:.25em;
@@ -54,3 +54,28 @@ body{
 	margin-bottom:.5em;
 }
 
+#expanded{
+	display:none;
+	position:fixed;
+	text-align:left;
+	top:10%;
+	left:5%;
+	right:5%;
+	background-color: #464f61;
+	padding:.25em;
+	padding-left: .5em;
+	padding-right: .5em;
+	cursor:pointer;
+	border-radius:25px;
+	z-index:1;
+	margin:0 auto;
+}
+
+#close{
+
+	text-decoration:underline;
+	text-align:center;
+	width:50%;
+	margin: 0 auto;
+
+}
