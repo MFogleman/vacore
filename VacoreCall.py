@@ -1,4 +1,5 @@
-#! /usr/bin/python
+#! /home/yedrpjgy/virtualenv/public__html_vacore/2.7/bin/python2.7
+
 
 print "Content-type: text/html"
 print ""
@@ -8,19 +9,15 @@ import cgitb
 import urllib2
 import re
 import string
-
-data = cgi.FieldStorage()
-url = data["targetUrl"].value
-
-req = urllib2.Request(url)
-
-response = urllib2.urlopen(req)
-
-page = response.read()
-
-text = page[page.find('<span id="va_code">'):page.find("</section><input")] 
-
-finaltext = re.sub(r'<(?!\/?p(?=>|\s.*>))\/?.*?>','', text)
-
-print finaltext
-
+import json
+import sys
+try:
+        data = cgi.FieldStorage()
+        url = data["targetUrl"].value
+        req = urllib2.Request(url)
+        response = urllib2.urlopen(req)
+        page = response.read()
+        print page
+except:
+        print 'error'
+        raise

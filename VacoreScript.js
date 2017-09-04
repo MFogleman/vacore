@@ -579,16 +579,17 @@ function codeClicked(divTarget){
 		divTarget.append(loader);
 
 		var ajaxObj = getText(divTarget.html());
-		
+			
 		ajaxObj.done(function(data){
+			var dataJSON = JSON.parse(data)
 			$(".fa-spinner").remove();
-			divTarget.append("<br><p>" + data + "</p>");
+			divTarget.append("<br><p>" + dataJSON.ChapterList[0].Body + "</p>");
 			divTarget.removeClass("closedBox");
 		});
 
 	}else if (!divTarget.hasClass("closedBox") && divTarget.hasClass("openBox")){  //if box is already expanded
 		divTarget.addClass("closedBox");
-		var cleanText = divTarget.html().replace(/\<br\>.*\n\<p\>\<\/p\>/, ''); 
+		var cleanText = divTarget.html().replace(/\<br\>\<p\>.*\<p\>\<\/p\>/, ''); 
 		divTarget.html(cleanText);
 		divTarget.removeClass("openBox");
 	}
@@ -596,10 +597,9 @@ function codeClicked(divTarget){
 
 function getText(lawObj){
 	var lawNumber = lawObj.match(/\[.*?\]/)[0].replace(/\[|\]/g, ''); //pulls Code Section Number from brackets in description
-	var lawUrl = "http://law.lis.virginia.gov/vacode/title4.1/chapter3/section" + lawNumber;  //website for that Code Section
-	
+    var lawUrl = "https://law.lis.virginia.gov/LawPortalWebService/json/CodeofVAGetSectionDetails/" + lawNumber;  //website for that Code Section
 	return $.ajax({
-		type: "POST",
+		type: "GET",
 		url: "VacoreCall.py",
 		data: {"targetUrl": lawUrl},
 		dataType: "text"
