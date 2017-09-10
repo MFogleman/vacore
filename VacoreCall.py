@@ -1,4 +1,4 @@
-#! /home/yedrpjgy/virtualenv/public__html_vacore/2.7/bin/python2.7
+#! /home/yedrpjgy/virtualenv/public__html_vacore/2.7/bin/python2.7 
 
 
 print "Content-type: text/html"
@@ -14,10 +14,10 @@ import sys
 try:
         data = cgi.FieldStorage()
         url = data["targetUrl"].value
-        req = urllib2.Request(url)
+	req = urllib2.Request(url)
         response = urllib2.urlopen(req)
-        page = response.read()
-        print page
+	page = response.read()
+	print page
 except:
-        print 'error'
-        raise
+	print 'error'
+	raise
